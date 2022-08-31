@@ -1,0 +1,3 @@
+Linea 1, 'consectetur' no esta en el diccionario.
+Quizas quiso decir: conecte-tu, conecte-tui, conecte-tul, conecte-tun, conecte-tup
+
