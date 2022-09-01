@@ -3,6 +3,12 @@
 #include <string.h>
 #include "../headers/print.h"
 
+// print_text : CList*, char* -> NULL
+/*
+  * Imprime sobre un archivo las correciones obtenidas
+  - corrections : CList* - Lista de correciones
+  - path : char* - nombre del archivo de entrada con el texto a corregir
+*/
 void print_text(CList *corrections, char *path) {
   char *output = malloc(sizeof(char) * strlen(path)+9);
   strcpy(output, path);
@@ -13,7 +19,7 @@ void print_text(CList *corrections, char *path) {
   CNode *node = corrections->first;
 
   while(node) {
-    corr_fprintf(node -> data, f);  
+    corr_fprintf(node->correction, f);  
     node = cnode_pass(node);
   }
   free(output);

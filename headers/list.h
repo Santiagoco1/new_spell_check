@@ -4,21 +4,55 @@
 #include "corr.h"
 
 typedef struct _CNode {
-  void *data;
+  Corr *correction;
   struct _CNode *next;
 } CNode;
 
 typedef struct _CList {
   CNode *first;
-  CNode *last;
+  CNode *last;koko
 } CList;
 
+// clist_create : NULL -> CList*
+/*
+    * Crea y guarda en memoria una CList
+ */
 CList *clist_create();
 
-CNode *cnode_create(void *data);
+// cnode_create : Corr* -> CNode*
+/*
+    * Crea y guarda en memoria un CNode
+    - correction : Corr* - correcion
+*/
+CNode *cnode_create(Corr *correction);
 
-CList *clist_add_last(CList *list, void *data);
+// clist_add_last : CList*, Corr *data -> CList*
+/*
+    * Agrega una coreccion al final de una CList
+    - list : CList* - lista de corecciones
+    - correction : Corr* - coreccion
+*/
+CList *clist_add_last(CList *list, Corr *correction);
 
+// cnode_pass : CNode* -> CNode*
+/*
+    * Pasa de un CNode al siguiente, y lo destruye
+    - node : CNode* - nodo de correcciones
+*/
 CNode *cnode_pass(CNode *node);
+
+// cnode_search : CNode*
+/*
+    * Pasa de un CNode al siguiente, y lo destruye
+    - node : CNode* - nodo de correcciones
+*/
+void cnode_destroy(CNode *node);
+
+// cnode_search : CNode*
+/*
+    * Pasa de un CNode al siguiente, y lo destruye
+    - node : CNode* - nodo de correcciones
+*/
+void clist_destroy(CList *list);
 
 #endif

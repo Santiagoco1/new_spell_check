@@ -3,7 +3,7 @@
 #include <string.h>
 #include "../headers/dict.h"
 
-char **get_words(char *path, int *amount, int *lengths) {
+char **get_cupboard(char *path, int *amount, int *max_length) {
 
   int size = 1024, length;
   char string[35];
@@ -19,9 +19,10 @@ char **get_words(char *path, int *amount, int *lengths) {
     }
 
     length = strlen(string);
-    buf[(*amount)] = malloc(sizeof(char) * length);
+    buf[(*amount)] = malloc(sizeof(char) * length+1);
     strcpy(buf[(*amount)], string);
-    if(!lengths[length]) lengths[length]++;
+    buf[(*amount)][length] = '\0'; //preguntar
+    if(length > (*max_length)) (*max_length) = length;
 
     (*amount)++;
   }
@@ -30,10 +31,11 @@ char **get_words(char *path, int *amount, int *lengths) {
   return buf;
 }
 
-CTree get_dictionary(char **words, int amount) {
+CTree get_dictionary(char **cupboard, int amount) {
   CTree dicionary = ctree_create();
   for(int i = 0; i < amount; i++) {
-    ctree_add(dicionary, words[i]);
+    ctree_add(dicionary, cupboard[i]);
+    free(cupboard[i]);
   }
   return dicionary;
 }

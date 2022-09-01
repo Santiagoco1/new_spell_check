@@ -70,7 +70,6 @@ int ctree_search(CTree ctree, char* word) {
 void ctree_destroy(TNode *node) {
     for(int i = 0; i < 26; i++) {
         if(node->sons[i]) ctree_destroy(node->sons[i]);
-        free(node->sons[i]);
     }
     free(node->sons);
     free(node);

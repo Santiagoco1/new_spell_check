@@ -27,7 +27,7 @@ void corr_fprintf(Corr *correction, FILE *f) {
   } else fprintf(f, "No se encontraron sugerencias\n\n");
 }
 
-void corr_destroy(void *correction) {
+void corr_destroy(Corr *correction) {
   free(((Corr*)correction)->word);
   for(int i = 0; i < ((Corr*)correction)->count; i++) {
     free(((Corr*)correction)->suggs[i]);
