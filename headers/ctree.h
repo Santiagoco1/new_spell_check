@@ -1,12 +1,23 @@
 #ifndef __CTREE_H__
 #define __CTREE_H__
 
+// Estructura TNode
+/*
+    * Estructura que representa el nodo de un arbol de caracteres
+    - data : char / caracter de una palabra agregada al arbol
+    - last : int / bandera que indica si una palabra termina en ese nodo
+    - sons : TNode** / lista de nodos que representa cada uno de los caracteres consiguientes posibles
+*/
 typedef struct _TNode {
     char data;
     int last;
     struct _TNode **sons;
 } TNode;
 
+// Estructura CTree
+/*
+    * Estrucutra que representa el arbol de caracteres
+*/
 typedef TNode *CTree;
 
 // tnode_create : char, int -> TNode
@@ -62,9 +73,16 @@ int ctree_search(CTree ctree, char* word);
 
 // ctree_destroy : TNode* -> NULL
 /*
-    * Destruye y borra de la memoria un arbol de caracteres
-    - node : TNode* / nodo actual
+    * Destruye y borra de la memoria un tnode
+    - node : TNode* / nodo actual del arbol
 */
-void ctree_destroy(TNode *node);
+void tnode_destroy(TNode *node);
+
+// ctree_destroy : CTree* -> NULL
+/*
+    * Destruye y borra de la memoria un ctree
+    - ctree : CTree* / arbol de caracteres
+*/
+void ctree_destroy(CTree ctree);
 
 #endif

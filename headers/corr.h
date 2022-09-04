@@ -1,6 +1,14 @@
 #ifndef __CORR_H__
 #define __CORR_H__
 
+// Estructura Corr
+/*
+  * Estrucutra que representa la correccion de una palabra
+  - word : char* / palabra original a corregit
+  - line : int / linea del texto donde se encuentra el error
+  - count : int / cantidad de sugerencias encontradas
+  - suggs : char** / lista de sugerencias encontradas
+*/
 typedef struct _Corr {
   char *word;
   int line;

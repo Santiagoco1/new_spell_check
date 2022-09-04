@@ -3,14 +3,26 @@
 
 #include "corr.h"
 
+// Estrucutura CNode
+/*
+    * Estrcutura que representa un nodo de una lista de correcciones
+    - correction : Corr* / correccion a guardar
+    - next : CNode* / siguiente nodo en la lista
+*/
 typedef struct _CNode {
   Corr *correction;
   struct _CNode *next;
 } CNode;
 
+// Estructura CList
+/*
+    * Estructura que representa una lista de correcciones
+    - first : CNode* / primer nodo de la lista
+    - last : CNode* / ultimo nodo de la lista
+*/
 typedef struct _CList {
   CNode *first;
-  CNode *last;koko
+  CNode *last;
 } CList;
 
 // clist_create : NULL -> CList*

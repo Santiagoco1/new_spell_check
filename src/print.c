@@ -10,6 +10,7 @@
   - path : char* - nombre del archivo de entrada con el texto a corregir
 */
 void print_text(CList *corrections, char *path) {
+  // Creo la dirreccion del archivo de salida
   char *output = malloc(sizeof(char) * strlen(path)+9);
   strcpy(output, path);
   output[strlen(path)-4]='\0';
@@ -18,10 +19,12 @@ void print_text(CList *corrections, char *path) {
   FILE *f = fopen(output, "w");
   CNode *node = corrections->first;
 
+  // Imprimo correccion por correccion, usando una funcion
   while(node) {
-    corr_fprintf(node->correction, f);  
+    corr_fprintf(node->correction, f);
     node = cnode_pass(node);
   }
+  
   free(output);
   fclose(f);
 }
