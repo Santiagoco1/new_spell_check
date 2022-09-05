@@ -44,7 +44,7 @@ Cuando se llega al final de una ramificación, se comprueba si la palabra perten
 * **Makefile** : archivo makefile con los comandos predefinidos
 * **README.md** : archivo con las intrucciones del programa
 ### Headers
-* **aux.h** : header con las declaraciones de las funciones auxiliares
+* **auxi.h** : header con las declaraciones de las funciones auxiliares
 * **check.h** : header con las declaraciones de las funciones que chequean el texto
 * **corr.h** : header con las estructuras y declaraciones de las funciones de correccion
 * **ctree.h** : header con las estructuras y declaraciones de las funciones del ctree
@@ -53,7 +53,7 @@ Cuando se llega al final de una ramificación, se comprueba si la palabra perten
 * **metd.h** : header con las estructuras y declaraciones de los métodos del algoritmo
 * **print.h** : header con las declaraciones de funciones de impresión de archivo de salida
 ### Source
-* **aux.c** : archivo con las definiciones de funciones auxiliares
+* **auxi.c** : archivo con las definiciones de funciones auxiliares
 * **check.c** : archivo con las definiciones de de las funciones que chequean el texto
 * **corr.c** : archivo con las definiciones de funciones de de las funciones de correccion
 * **ctree.c** : archivo con las definiciones de funciones de las funciones del ctree
@@ -62,7 +62,7 @@ Cuando se llega al final de una ramificación, se comprueba si la palabra perten
 * **metd.c** : archivo con las definiciones de funciones de los métodos del algoritmo
 * **print.c** : archivo con las definiciones de funciones de impresión de archivo de salida
 ### Tests
-* **test_aux.c** : archivo con funciones auxiliares
+* **test_auxi.c** : archivo con funciones auxiliares
 * **test_check.c** : archivo con los tests de check.c
 * **test_corr.c** : archivo con los tests de corr.c
 * **test_ctree.c** : archivo con los tests de ctree.c
@@ -70,6 +70,8 @@ Cuando se llega al final de una ramificación, se comprueba si la palabra perten
 * **test_list.c** : archivo con los tests de list.c
 * **test_metd.c** : archivo con los tests de metd.c
 * **test_print.c** : archivo con los tests de print.c
+### Files Test :
+Recompilación de test con diversos archivos, incluye el texto original, el resultado y el valgrind
 ## Comandos 
 Para compilar el programa, correr el siguiente comando:
 ```bash
@@ -81,7 +83,7 @@ Para corregir un texto con un diccionario dado, correr el siguiente comando
 ```
 Para compilar los tests, correr los siguientes comandos:
 ```bash
-mek test_aux
+mek test_auxi
 make test_check
 make test_corr
 make test_ctree
@@ -91,7 +93,7 @@ make test_metd
 ```
 Para testear, correr los siguientes comandos:
 ```bash
-./test_aux
+./test_auxi
 ./test_check
 ./test_corr
 ./test_ctree
