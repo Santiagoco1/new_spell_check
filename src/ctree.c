@@ -7,9 +7,9 @@ TNode *tnode_create(char data, int last) {
     // Reservo la memoria necesaria
     TNode *new_node = malloc(sizeof(TNode));
     new_node->sons = malloc(sizeof(TNode*) * 26);
+    // Asigno los datos correpondientes
     new_node->data = data;
     new_node->last = last;
-    // Asigna los datos correpondientes
     for(int i = 0; i < 26; i++) new_node->sons[i] = NULL;
     return new_node;
 }
@@ -51,11 +51,11 @@ void ctree_add(CTree ctree, char *word) {
 int _ctree_search(TNode *node, char *word, int pos, int length) {
     // Primero me fijo si llegue al final de la palabra
     if(pos == length) {
-        // Me fijo si una palabra del arbol, termina justo en el nodo actual
+        // Me fijo si es una palabra del diccionario, en el caso que una palabra termine justo en el nodo actual
         return (node->last);
     } else {
         // En caso que no, me fijo si me puedo mover al siguiente nodo con el siguiente caracter
-        // Si no puedo, entonces significa que la palabra no esta y devuelvo 
+        // Si no puedo, entonces significa que la palabra no esta y devuelvo 0
         int letter_ascii = (int)word[pos]-97;
         return node->sons[letter_ascii] ? _ctree_search(node->sons[letter_ascii], word, pos+1, length) : 0;
     }

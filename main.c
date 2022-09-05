@@ -8,13 +8,11 @@
 // Main : int, char** -> int
 /*
   * Funcion principal del programa
-    Corrige los errores ortograficos de un texto a  partir
+    Corrige los errores ortograficos de un texto a partir
     de un diccionaro dado y los imprime en un archivo de salida
     - argc : int / cantidad de argumentos de entrada
     - argv : char** / argumentos de entrada
-    -
 */
-
 int main(int argc, char **argv ) {
   // Primero nos fijamos si tenemos todos los argumentos necesarios
   if(argc == 3) {

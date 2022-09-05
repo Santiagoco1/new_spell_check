@@ -15,7 +15,7 @@ char **find_suggestions(char *word, int *count, CTree dictionary) {
   char **suggestions = malloc(sizeof(char*) * SUGGESTIONS);
   for(int i = 0; i < SUGGESTIONS; i++) suggestions[i] = NULL;
   // La palabra modificada tendra una mayor cantidad de caracteres posibles
-  // debido a los posibles agregados por la cantidad de pasos y el terminador
+  // debido a los posibles agregados de caracteres por las modificaciones y por el terminador
   char modded_word[length+STEPS+1]; 
 
   // Itero sobre la cantidad de modificaciones posibles
@@ -29,7 +29,6 @@ char **find_suggestions(char *word, int *count, CTree dictionary) {
     apply_methods(root, root, suggestions, w, s);
     i++;
   }
-
   // Si no se encontraron sugerencias, borro de la memoria la lista de sugerencias
   // ya que no ya no sera necesario tenerla
   if((*count) > 0) return suggestions;
@@ -71,7 +70,7 @@ CList *check_text(char *path, CTree dictionary, int max_length) {
   FILE *file = fopen(path, "r");
 
   // Itera sobre los caracteres del texto, hasta que encuentra un espacio o salto de linea
-  // y separa la palabra formada hasta ese entonces, y la corrige
+  // y separa la palabra formada hasta ese entonces, para despues corregirla
   while(fscanf(file, "%c%*[:;,.?!]", &c) == 1) {
     // Cuando encuentra un enter o un salto de linea corta la palabra que estaba formando
     if(c == ' ' || c == '\n') {

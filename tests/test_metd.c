@@ -3,13 +3,7 @@
 #include <string.h>
 #include <assert.h>
 #include "../headers/metd.h"
-
-void double_list_destroy(char **list, int len) {
-    for(int i = 0; i < len; i++) {
-       if(list[i]) free(list[i]);
-    }
-    free(list);
-}
+#include "../headers/aux.h"
 
 // ** No testeo el metodo nulo, debido a que no hace modificaciones y por lo tanto no es posible revisarlo **
 
@@ -53,7 +47,7 @@ void test_exchange_chars() {
     ctree_destroy(ctree2);
     double_list_destroy(suggestions2, 1);
 
-    // Caso 3 : Intercambiar caracteres 3 y 4
+    // // Caso 3 : Intercambiar caracteres 3 y 4
     CTree ctree3 = ctree_create();
     ctree_add(ctree3, "gaot\0");
     TNode *root3 = ctree3;
@@ -568,7 +562,6 @@ int main() {
     test_insert_char();
     test_remove_char();
     test_change_char();
-    test_string_list_search();
     test_split_word();
     test_apply_methods();
     test_check_suggestions();

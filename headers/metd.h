@@ -3,6 +3,7 @@
 
 #include "list.h"
 #include "ctree.h"
+#include "aux.h"
 
 // Estructura Words
 /*
@@ -101,16 +102,6 @@ void change_char(TNode *root, TNode *node, char **suggestions, Words w, State s)
     - s : State / variables que indican el estado actual del algoritmo 
 */
 void split_word(TNode *root, TNode *node, char **suggestions, Words w, State s);
-
-// string_list_search : char**, char*, int -> int
-/*
-    * Se fija en una lista de strings, si se encuentra un string en especifico
-    Devuelve 1 en el caso que si, 0 en el caso contrario
-    - list : char** / lista de strings
-    - string : char* / string a buscar
-    - length : int / largo de la lista
-*/
-int string_list_search(char **list, char* string, int length);
 
 // check_suggestion : TNode*, char**, Words, State -> NULL
 /*

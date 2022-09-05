@@ -4,6 +4,14 @@
 #include "list.h"
 #include "corr.h"
 
+// corr_fprintf : Corr*, FILE* -> NULL
+/*
+  * Guarda en un archivo la correccion pasada
+  - correction : Corr* / correccion de una palabra invalida
+  - path : FILE* / archivo donde guardar la correccion
+*/
+void corr_fprintf(Corr *correction, FILE *path);
+
 // print_text : CList*, char* -> NULL
 /*
     * Crea un archivo de salida e imprime en el mismo las correcciones obtenidas del texto

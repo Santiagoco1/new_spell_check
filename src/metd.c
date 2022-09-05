@@ -4,8 +4,7 @@
 #include "../headers/metd.h"
 
 void null_method(TNode *root, TNode *node, char **suggestions, Words w, State s) {
-  //printf("Null Method - Word : %s, Len : %d, Pos : %d, Word_Mod : %s, Len_Mod : %d, Pos_Mod : %d\n", w.word, w.len, w.pos, w.word_mod, w.len_mod, w.pos_mod);
-  int letter_ascii = (int)w.word[w.pos]-97;
+  int letter_ascii = get_ascii(w.word[w.pos]);
   // Primero me fijo si puedo seguir avanzando por el arbol, con el siguiente caracter de la palabra original
   if(node->sons[letter_ascii]) {
     // Guardo el caracter original
@@ -14,7 +13,7 @@ void null_method(TNode *root, TNode *node, char **suggestions, Words w, State s)
     // Modifico todas las variables necesarias
     w.pos++;
     w.pos_mod++;
-    // Vuelvo a llamer recursivamente a la funcion principal
+    // Vuelvo a llamar recursivamente a la funcion principal
     apply_methods(root, next_node, suggestions, w, s);
     // Borro con el terminador el caracter que agregue
     w.word_mod[w.pos_mod-1] = '\0';
@@ -22,9 +21,8 @@ void null_method(TNode *root, TNode *node, char **suggestions, Words w, State s)
 }
 
 void exchange_chars(TNode *root, TNode *node, char **suggestions, Words w, State s) {
-  //printf("Exchange Char - Word : %s, Len : %d, Pos : %d, Word_Mod : %s, Len_Mod : %d, Pos_Mod : %d\n", w.word, w.len, w.pos, w.word_mod, w.len_mod, w.pos_mod);
-  int first_letter_ascii = (int)w.word[w.pos]-97;
-  int second_letter_ascii = (int)w.word[w.pos+1]-97;
+  int first_letter_ascii = get_ascii(w.word[w.pos]);
+  int second_letter_ascii = get_ascii(w.word[w.pos+1]);
   // Solamente realizo la modificacion si al intercambiar los caracteres, puedo seguir avanzando por el arbol
   if(node->sons[second_letter_ascii] && node->sons[second_letter_ascii]->sons[first_letter_ascii]) {
     // Realizo las modificiones
@@ -35,16 +33,15 @@ void exchange_chars(TNode *root, TNode *node, char **suggestions, Words w, State
     w.pos += 2;
     w.pos_mod += 2;
     s.steps--;
-    // Vuelvo a llamer recursivamente a la funcion principal
+    // Vuelvo a llamar recursivamente a la funcion principal
     apply_methods(root, next_node, suggestions, w, s);
-    // Borro con el terminador, la modificacion que realice
+    // Borro con el terminador, las modificaciones que realice
     w.word_mod[w.pos_mod-1] = '\0';
     w.word_mod[w.pos_mod-2] = '\0';
   }
 }
 
 void insert_char(TNode *root, TNode *node, char **suggestions, Words w, State s) {
-  //printf("Insert Char - Word : %s, Len : %d, Pos : %d, Word_Mod : %s, Len_Mod : %d, Pos_Mod : %d\n", w.word, w.len, w.pos, w.word_mod, w.len_mod, w.pos_mod);
   // Modifico todas las variables necesarias
   w.len_mod++;
   w.pos_mod++;
@@ -55,7 +52,7 @@ void insert_char(TNode *root, TNode *node, char **suggestions, Words w, State s)
       // Realizo las modificiones
       TNode *next_node = node->sons[i];
       w.word_mod[w.pos_mod-1] = next_node->data;
-      // Vuelvo a llamer recursivamente a la funcion principal
+      // Vuelvo a llamar recursivamente a la funcion principal
       apply_methods(root, next_node, suggestions, w, s);
       // Borro con el terminador, la modificacion que realice
       w.word_mod[w.pos_mod-1] = '\0';
@@ -64,19 +61,17 @@ void insert_char(TNode *root, TNode *node, char **suggestions, Words w, State s)
 }
 
 void remove_char(TNode *root, TNode *node, char **suggestions, Words w, State s) {
-  //printf("Remove Char - Word : %s, Len : %d, Pos : %d, Word_Mod : %s, Len_Mod : %d, Pos_Mod : %d\n", w.word, w.len, w.pos, w.word_mod, w.len_mod, w.pos_mod);
   // Modifico todas las variables necesarias
   w.pos++;
   w.len_mod--;
   s.steps--;
   // Al avanzar sobre la palabra orginal, la modificaion se realiza al ya no tener en cuenta el caracter anterior
-  // Vuelvo a llamer recursivamente a la funcion principal
+  // Vuelvo a llamar recursivamente a la funcion principal
   apply_methods(root, node, suggestions, w, s);
 }
 
 void change_char(TNode *root, TNode *node, char **suggestions, Words w, State s) {
-  //printf("Change Char - Word : %s, Len : %d, Pos : %d, Word_Mod : %s, Len_Mod : %d, Pos_Mod : %d\n", w.word, w.len, w.pos, w.word_mod, w.len_mod, w.pos_mod);
-  int letter_ascii = (int)w.word[w.pos]-97;
+  int letter_ascii = get_ascii(w.word[w.pos]);
   // Modifico todas las variables necesarias
   w.pos++;
   w.pos_mod++;
@@ -87,7 +82,7 @@ void change_char(TNode *root, TNode *node, char **suggestions, Words w, State s)
       // Realizo las modificiones
       TNode *next_node = node->sons[i];
       w.word_mod[w.pos_mod-1] = next_node->data;
-      // Vuelvo a llamer recursivamente a la funcion principal
+      // Vuelvo a llamar recursivamente a la funcion principal
       apply_methods(root, next_node, suggestions, w, s);
       // Borro con el terminador, la modificacion que realice
       w.word_mod[w.pos_mod-1] = '\0';
@@ -96,7 +91,6 @@ void change_char(TNode *root, TNode *node, char **suggestions, Words w, State s)
 }
 
 void split_word(TNode *root, TNode *node, char **suggestions, Words w, State s) {
-  //printf("Split Word - Word : %s, Len : %d, Pos : %d, Word_Mod : %s, Len_Mod : %d, Pos_Mod : %d\n", w.word, w.len, w.pos, w.word_mod, w.len_mod, w.pos_mod);
   // Primero me fijo si en el nodo actual termina una palabra del diccionario
   if(node->last) {
     // En el caso que si, guardo un '-' en la palabra modificada para representar la separacion
@@ -113,16 +107,7 @@ void split_word(TNode *root, TNode *node, char **suggestions, Words w, State s) 
   }
 }
 
-int string_list_search(char **list, char* string, int length) {
-  // Busco de forma iterativa si el elemento pertenece a la lista
-  for(int i = 0; i < length; i++) {
-    if(strcmp(list[i], string) == 0) return 1;
-  }
-  return 0;
-}
-
 void check_suggestion(TNode *node, char **suggestions, Words w, State s) {
-  //printf("Check Suggestions - Word : %s, Len : %d, Pos : %d, Word_Mod : %s, Len_Mod : %d, Pos_Mod : %d, Nodo : %c, Last : %d\n", w.word, w.len, w.pos, w.word_mod, w.len_mod, w.pos_mod, node->data, node->last);
   // Agrego el terminador al final en el caso que no lo tenga
   w.word_mod[w.pos_mod] = '\0';
   // Me fijo si en el nodo actual termina una palabra del diccionario
@@ -136,7 +121,6 @@ void check_suggestion(TNode *node, char **suggestions, Words w, State s) {
 }
 
 void apply_methods(TNode *root, TNode *node, char **suggestions, Words w, State s) {
-  //printf("Apply Methods - Word : %s, Len : %d, Pos : %d, Word_Mod : %s, Len_Mod : %d, Pos_Mod : %d\n", w.word, w.len, w.pos, w.word_mod, w.len_mod, w.pos_mod);
   // Primero me fijo si ya encontre todas las sugerencias
   if((*s.count) < 5) {
     // Despues chequeo que me encuentre al final de la palabra original, osea ya no hay mas caracteres que agregar de la palabra original
@@ -150,7 +134,7 @@ void apply_methods(TNode *root, TNode *node, char **suggestions, Words w, State 
         check_suggestion(node, suggestions, w, s);
       }
     } else {
-      // En el caso que todavia no llegue al final de la palabra, realizo todas las modificiones posibles
+      // En el caso que todavia no haya llegado al final de la palabra, realizo todas las modificiones posibles restantes
       // El metodo nulo siempre se realiza por default, y no cuenta como modificacion
       null_method(root, node, suggestions, w, s);
       // En el caso que todavia no haya hecho todas las modificaciones posibles, sigo realizando mas

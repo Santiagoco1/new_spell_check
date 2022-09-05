@@ -26,14 +26,6 @@ typedef struct _Corr {
 */
 Corr *corr_create(char *str, int line, int count, char **suggestions);
 
-// corr_fprintf : Corr*, FILE* -> NULL
-/*
-  * Guarda en un archivo la correccion pasada
-  - correction : Corr* / correccion de una palabra invalida
-  - path : FILE* / archivo donde guardar la correccion
-*/
-void corr_fprintf(Corr *correction, FILE *path);
-
 // corr_destroy : Corr* -> NULL
 /*
   * Destrute y borra de memoria una correccion

@@ -140,7 +140,6 @@ void test_cnode_pass() {
     assert(cnode->correction->count == 1);
     assert(strcmp(cnode->correction->suggs[0], "perr") == 0);
 
-    printf("N\n");
     cnode_destroy(cnode);
     free(clist);
 }
