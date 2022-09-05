@@ -3,7 +3,7 @@
 #include <string.h>
 #include <assert.h>
 #include "../headers/check.h"
-#include "../headers/aux.h"
+#include "../headers/auxi.h"
 
 // Test Find Suggestions
 void test_find_suggestions() {

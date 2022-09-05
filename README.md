@@ -42,6 +42,7 @@ Cuando se llega al final de una ramificación, se comprueba si la palabra perten
 ## Archivos
 * **Main.c** : archivo principal del programa
 * **Makefile** : archivo makefile con los comandos predefinidos
+* **dictionary** : diccionario dado como enunciado
 * **README.md** : archivo con las intrucciones del programa
 ### Headers
 * **auxi.h** : header con las declaraciones de las funciones auxiliares

@@ -3,7 +3,7 @@
 #include <string.h>
 #include <assert.h>
 #include "../headers/metd.h"
-#include "../headers/aux.h"
+#include "../headers/auxi.h"
 
 // ** No testeo el metodo nulo, debido a que no hace modificaciones y por lo tanto no es posible revisarlo **
 

@@ -1,7 +1,7 @@
 check: main.c src/dict.c src/check.c src/print.c src/ctree.c src/list.c src/corr.c src/metd.c src/auxi.c
 	gcc -g -std=c99 -Wall -Werror main.c src/dict.c src/check.c src/print.c src/ctree.c src/corr.c src/list.c src/metd.c src/auxi.c -o check
 
-test_auxi: tests/test_aux.c src/auxi.c
+test_auxi: tests/test_auxi.c src/auxi.c
 	gcc -g -std=c99 -Wall -Werror tests/test_auxi.c src/auxi.c -o test_auxi
 
 test_check: tests/test_check.c src/check.c src/ctree.c src/metd.c src/corr.c src/list.c src/auxi.c
