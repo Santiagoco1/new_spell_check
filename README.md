@@ -69,6 +69,7 @@ Cuando se llega al final de una ramificación, se comprueba si la palabra perten
 * **test_dict.c** : archivo con los tests de dict.c
 * **test_list.c** : archivo con los tests de list.c
 * **test_metd.c** : archivo con los tests de metd.c
+* **test_print.c** : archivo con los tests de print.c
 ## Comandos 
 Para compilar el programa, correr el siguiente comando:
 ```bash
@@ -76,7 +77,7 @@ make check
 ```
 Para corregir un texto con un diccionario dado, correr el siguiente comando
 ```bash
-./check <nombre_diccionario> <nombre_texto>
+./check <nombre_diccionario> <nombre_archivo_texto> <nombre_archivo_de_salida>
 ```
 Para compilar los tests, correr los siguientes comandos:
 ```bash

@@ -15,7 +15,7 @@
 */
 int main(int argc, char **argv ) {
   // Primero nos fijamos si tenemos todos los argumentos necesarios
-  if(argc == 3) {
+  if(argc == 4) {
     // Definimos las variables necesarias
     // - amount : cantidad final de palabras del lemario
     // - max_length : largo maximo final de las palabras del lemario
@@ -30,11 +30,11 @@ int main(int argc, char **argv ) {
 
     // Realizamos las correcciones necesarias en el texto dado por el
     // segundo argumento, utilizando el ctree ya creado
-    CList *corrections = check_text(argv[2], dictionary, max_length);
+    CList *corrections = check_text(dictionary, argv[2], max_length);
     ctree_destroy(dictionary);
 
     // Imprimimos en un archivo de salida las correcciones hechas
-    print_text(corrections, argv[2]);
+    print_text(corrections, argv[3]);
     free(corrections);
 
   } else {

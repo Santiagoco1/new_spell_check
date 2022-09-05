@@ -31,7 +31,7 @@ void test_ctree_create() {
 void test_ctree_add() {
     CTree ctree = ctree_create();
 
-    // Caso 1 : palabra no intercalada con otras
+    // Caso 1 : palabras diferentes
     ctree_add(ctree, "casa");
     ctree_add(ctree, "gato");
 
@@ -67,7 +67,7 @@ void test_ctree_add() {
     assert(cnode1->data == 'o');
     assert(cnode1->last == 1);
 
-    // Caso 2 : palabra intercalada con otras
+    // Caso 2 : palabra adentro de otra
     ctree_add(ctree, "gaton");
     TNode *cnode2 = ctree;
     assert(cnode2->data == '\0');
@@ -87,6 +87,30 @@ void test_ctree_add() {
     cnode2 = cnode2->sons[13];
     assert(cnode2->data == 'n');
     assert(cnode2->last == 1);
+
+    // Caso 3 : palabra intercalada con otra
+    ctree_add(ctree, "gatos");
+    TNode *cnode3 = ctree;
+    assert(cnode3->data == '\0');
+    assert(cnode3->last == 0);
+    cnode3 = cnode3->sons[6];
+    assert(cnode3->data == 'g');
+    assert(cnode3->last == 0);
+    cnode3 = cnode3->sons[0];
+    assert(cnode3->data == 'a');
+    assert(cnode3->last == 0);
+    cnode3 = cnode3->sons[19];
+    assert(cnode3->data == 't');
+    assert(cnode3->last == 0);
+    TNode* ramification = cnode3->sons[14];
+    assert(ramification->data == 'o');
+    assert(ramification->last == 1);
+    cnode3 = ramification->sons[13];
+    assert(cnode3->data == 'n');
+    assert(cnode3->last == 1);
+    cnode3 = ramification->sons[18];
+    assert(cnode3->data == 's');
+    assert(cnode3->last == 1);
 
     ctree_destroy(ctree);
 }

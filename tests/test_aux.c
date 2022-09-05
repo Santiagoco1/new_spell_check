@@ -32,4 +32,5 @@ void test_string_list_search() {
 
 int main() {
     test_string_list_search();
+    return 0;
 }
