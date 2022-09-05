@@ -1,7 +1,7 @@
 #ifndef __CTREE_H__
 #define __CTREE_H__
 
-// Estructura TNode
+// Estructura TNode, Tree Node
 /*
     * Estructura que representa el nodo de un arbol de caracteres
     - data : char / caracter de una palabra agregada al arbol
@@ -14,13 +14,13 @@ typedef struct _TNode {
     struct _TNode **sons;
 } TNode;
 
-// Estructura CTree
+// Estructura CTree, Chars Tree
 /*
     * Estrucutra que representa el arbol de caracteres
 */
 typedef TNode *CTree;
 
-// tnode_create : char, int -> TNode
+// tnode_create : char, int -> TNode*
 /*
     * Crea y guarda en memoria un nuevo TNode con los datos pasados
     - data : char / letra de una palabra guardada en el arbol
@@ -30,14 +30,15 @@ TNode *tnode_create(char data, int last);
 
 // ctree_create : NULL -> CTree
 /*
-    * Crea y guarda en memoria un nuevo CTree
+    * Crea y guarda en memoria un nuevo CTree con su respectiva raíz
 */
 CTree ctree_create();
 
-// _ctree_add : TNode*, char*^, int, int -> NULL
+// _ctree_add : TNode*, char*, int, int -> NULL
 /*
     * Funcion auxiliar de ctree_add
-    - node : TNode* / node actual
+      Se utiliza de forma recursiva para agregar la palabra al CTree
+    - node : TNode* / nodo actual
     - word : char* / palabra a agregar
     - pos : int / posicion en la palabra
     - length : int / largo de la palabra
@@ -55,6 +56,7 @@ void ctree_add(CTree ctree, char *word);
 // _ctree_search : TNode*, char*, int, int -> int
 /*
     * Funcion auxiliar de ctree_search
+      Se utiliza de forma recursiva para buscar una palabra en el CTree
     - node : TNode* / node actual
     - word : char* / palabra a buscar
     - pos : int / posicion en la palabra
@@ -73,14 +75,14 @@ int ctree_search(CTree ctree, char* word);
 
 // ctree_destroy : TNode* -> NULL
 /*
-    * Destruye y borra de la memoria un tnode
+    * Destruye y borra de la memoria un TNode
     - node : TNode* / nodo actual del arbol
 */
 void tnode_destroy(TNode *node);
 
 // ctree_destroy : CTree* -> NULL
 /*
-    * Destruye y borra de la memoria un ctree
+    * Destruye y borra de la memoria un CTree
     - ctree : CTree* / arbol de caracteres
 */
 void ctree_destroy(CTree ctree);

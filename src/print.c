@@ -22,13 +22,9 @@ void corr_fprintf(Corr *correction, FILE *f) {
 }
 
 void print_text(CList *corrections, char *path) {
-  // Creo la dirreccion del archivo de salida
-  char *output = malloc(sizeof(char) * strlen(path)+9);
-  strcpy(output, path);
-  output[strlen(path)-4]='\0';
-  strcat(output, "-checked.txt");
 
-  FILE *f = fopen(output, "w");
+  // Abro o creo el archivo de salida
+  FILE *f = fopen(path, "w+");
   CNode *node = corrections->first;
 
   // Imprimo correccion por correccion, usando una funcion
@@ -37,6 +33,5 @@ void print_text(CList *corrections, char *path) {
     node = cnode_pass(node);
   }
   
-  free(output);
   fclose(f);
 }

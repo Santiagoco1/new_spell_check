@@ -8,7 +8,7 @@
 #define STEPS 3
 #define INITIAL_SIZE 1000
 
-char **find_suggestions(char *word, int *count, CTree dictionary) {
+char **find_suggestions(CTree dictionary, char *word, int *count) {
   // Asigno los datos necesarios
   int length = strlen(word), length_mod = length, splited = 0;
   TNode *root = dictionary;
@@ -38,7 +38,7 @@ char **find_suggestions(char *word, int *count, CTree dictionary) {
   }
 }
 
-Corr *check_word(char *word, int length, int line, CTree dictionary, int max_length) { 
+Corr *check_word(CTree dictionary, char *word, int length, int line, int max_length) { 
   Corr *correction = NULL;
   // Me fijo si la palabra esta en el diccionario
   if(!ctree_search(dictionary, word)) {
@@ -48,7 +48,7 @@ Corr *check_word(char *word, int length, int line, CTree dictionary, int max_len
     // Me fijo si la palabra no supera el largo maximo del diccionario
     if(length <= max_length) {
       // En el caso que no, busco las sugerencias
-      suggestions = find_suggestions(word, &count, dictionary);
+      suggestions = find_suggestions(dictionary, word, &count);
     }
     // La correccion puede tener una lista vacia de sugerencias, indicando que no se han encontrado
     correction = corr_create(word, line, count, suggestions);
@@ -58,7 +58,7 @@ Corr *check_word(char *word, int length, int line, CTree dictionary, int max_len
   return correction; 
 }
 
-CList *check_text(char *path, CTree dictionary, int max_length) {
+CList *check_text(CTree dictionary, char *path, int max_length) {
   // Contador de saltos de linea
   int line = 1;
   // Contador de cantidad de letras
@@ -71,6 +71,7 @@ CList *check_text(char *path, CTree dictionary, int max_length) {
 
   // Itera sobre los caracteres del texto, hasta que encuentra un espacio o salto de linea
   // y separa la palabra formada hasta ese entonces, para despues corregirla
+  // Ignora ciertos caracteres en especifico
   while(fscanf(file, "%c%*[:;,.?!]", &c) == 1) {
     // Cuando encuentra un enter o un salto de linea corta la palabra que estaba formando
     if(c == ' ' || c == '\n') {
@@ -79,7 +80,7 @@ CList *check_text(char *path, CTree dictionary, int max_length) {
       // Se fija si la palabra formada hasta ese entonces no es vacia
       if (i > 0) {
         // Manda a corregir la palabra
-        if((correction = check_word(str, i, line, dictionary, max_length))) {
+        if((correction = check_word(dictionary, str, i, line, max_length))) {
           corrections_list = clist_add_last(corrections_list, correction);
         }
       }
@@ -96,7 +97,7 @@ CList *check_text(char *path, CTree dictionary, int max_length) {
   }
   // Me fijo con la ultima palabra del texto
   str[i] = '\0';
-  if((i > 0) && (correction = check_word(str, i, line, dictionary, max_length))) {
+  if((i > 0) && (correction = check_word(dictionary, str, i, line, max_length))) {
     corrections_list = clist_add_last(corrections_list, correction);
   }
   fclose(file);

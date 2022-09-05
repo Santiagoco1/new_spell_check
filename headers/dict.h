@@ -6,7 +6,7 @@
 // get_cupboard : char*, int*, int* -> char**
 /*
     * Devuelve en una lista de strings todas las palabras encontradas en un lemario,
-    ademas de definir la cantidad de palabras y el largo de la palabra mas larga
+      ademas de definir la cantidad de palabras y el largo de la palabra mas larga
     - path : char* / direccion del archivo donde esta el lemario
     - amount : int* / direccion de memoria de la variable que guarda la cantidad de palabras del lemario
     - max_length : int* /  direccion de memoria de la variable que guarda el largo de la palabra mas larga

@@ -3,7 +3,7 @@
 
 #include "list.h"
 #include "ctree.h"
-#include "aux.h"
+#include "auxi.h"
 
 // Estructura Words
 /*
@@ -11,7 +11,7 @@
     - word : char* / palabra original a corregir
     - len : int / largo de la palabra original
     - pos : int / posicion actual en la palabra original
-    - word_mod : char* / palabra donde se realizan las modificaciones de la actual
+    - word_mod : char* / palabra donde se realizan las modificaciones de la original
     - len_mod : int / largo actual de la palabra modiicada
     - pos_mod : int / posicion actual en la palabra modificada
 */
@@ -37,7 +37,7 @@ typedef struct _State {
     int splited;
 } State;
 
-// null_method : TNode*, char**, Words, State -> NULL
+// null_method : TNode*, TNode*, char**, Words, State -> NULL
 /*
     * Este metodo no realiza ninguna modificacion, simplemente avanza al siguiente caracter
     - root : TNode* / raiz del CTree
@@ -48,7 +48,7 @@ typedef struct _State {
 */
 void null_method(TNode *root, TNode *node, char **suggestions, Words w, State s);
 
-// exchange_char : TNode*, char**, Words, State -> NULL
+// exchange_char : TNode*, TNode*, char**, Words, State -> NULL
 /*
     * Este metodo intercambia dos caracteres abyacentes de la palabra
     - root : TNode* / raiz del CTree
@@ -59,7 +59,7 @@ void null_method(TNode *root, TNode *node, char **suggestions, Words w, State s)
 */
 void exchange_char(TNode *root, TNode *node, char **suggestions, Words w, State s);
 
-// insert_char : TNode*, char**, Words, State -> NULL
+// insert_char : TNode*, TNode*, char**, Words, State -> NULL
 /*
     * Este metodo agrega un caracter a la palabra
     - root : TNode* / raiz del CTree
@@ -70,9 +70,9 @@ void exchange_char(TNode *root, TNode *node, char **suggestions, Words w, State 
 */
 void insert_char(TNode *root, TNode *node, char **suggestions, Words w, State s);
 
-//remove_char : TNode*, char**, Words, State -> NULL
+//remove_char : TNode*, TNode*, char**, Words, State -> NULL
 /*
-    * Este metodo intercambia una caracter de la palabra
+    * Este metodo intercambia un caracter de la palabra
     - root : TNode* / raiz del CTree
     - node : TNode* / nodo actual del CTree
     - suggestions : char** / lista de sugerencias encontradas
@@ -81,7 +81,7 @@ void insert_char(TNode *root, TNode *node, char **suggestions, Words w, State s)
 */
 void remove_char(TNode *root, TNode *node, char **suggestions, Words w, State s);
 
-// change_char : TNode*, char**, Words, State -> NULL
+// change_char : TNode*, TNode*, char**, Words, State -> NULL
 /*
     * Este metodo remueve un caracter de la palabra
     - root : TNode* / raiz del CTree
@@ -92,7 +92,7 @@ void remove_char(TNode *root, TNode *node, char **suggestions, Words w, State s)
 */
 void change_char(TNode *root, TNode *node, char **suggestions, Words w, State s);
 
-// split_word : TNode*, char**, Words, State -> NULL
+// split_word : TNode*, TNode*, char**, Words, State -> NULL
 /*
     * Este metodo divide la palabra en dos
     - root : TNode* / raiz del CTree
@@ -116,7 +116,7 @@ void check_suggestion(TNode *node, char **suggestions, Words w, State s);
 
 // apply_methods : TNode*, TNode*, char**, Words, State -> NULL
 /*
-    * Aplica los distintos metodos de forma recursiva avanzado caracter por caracter de una palabra y plasmando sus
+    * Aplica los distintos metodos de forma recursiva avanzando caracter por caracter de una palabra y plasmando sus
       modificaciones en un nuevo string mientras se mueve por un CTree para poder encontrar las distintas sugerencias
       Al llegar al final de la palabra y al haber hecho todas las modificaciones, se fija si el string modificada es aceptado por el diccionario
     - root : TNode* / raiz del CTree
