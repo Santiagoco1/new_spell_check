@@ -102,4 +102,4 @@ Para testear, correr los siguientes comandos:
 ## Comentarios
 * El método de separar palabras que implemente, puede seguir implementando otros métodos una vez aplicado, pero unicamente sobre la segunda palabra, esto es debido a que mi algoritmo avanza caracter por caracter y no puede volver a atras para separar la palabra
 \
-Aparte termina dando los mismo resultados modificar la segunda palabra y después separarla, a separarla en un principio y después modificarla
+Aparte termina dando los mismos resultados modificar la segunda palabra y después separarla, a separarla en un principio y después modificarla
