@@ -1,0 +1,285 @@
+Linea 1, 'lorem' no esta en el diccionario.
+Quizas quiso decir: lorea, loree, loreo, lores, loread
+
+Linea 1, 'ipsum' no esta en el diccionario.
+Quizas quiso decir: ipsi, ipsis, insuma, insume, insumi
+
+Linea 1, 'sit' no esta en el diccionario.
+Quizas quiso decir: sita, sito, si, sic, sij
+
+Linea 1, 'amet' no esta en el diccionario.
+Quizas quiso decir: ame, amel, amen, ames, ame-ta
+
+Linea 1, 'consectetur' no esta en el diccionario.
+Quizas quiso decir: conecte-tura, conecte-tu, conecte-tui, conecte-tul, conecte-tun
+
+Linea 1, 'adipiscing' no esta en el diccionario.
+Quizas quiso decir: adia-piscina, adie-piscina, adio-piscina, adir-piscina, adiais-cina
+
+Linea 1, 'elit' no esta en el diccionario.
+Quizas quiso decir: elite, elites, elitro, elida, elide
+
+Linea 2, 'aliquam' no esta en el diccionario.
+Quizas quiso decir: alia, aliad, alian, aliar, alias
+
+Linea 2, 'velit' no esta en el diccionario.
+Quizas quiso decir: velite, velis, veliz, velites, velica
+
+Linea 2, 'sit' no esta en el diccionario.
+Quizas quiso decir: sita, sito, si, sic, sij
+
+Linea 2, 'amet' no esta en el diccionario.
+Quizas quiso decir: ame, amel, amen, ames, ame-ta
+
+Linea 2, 'efficitur' no esta en el diccionario.
+Quizas quiso decir: felicitar
+
+Linea 2, 'pulvinar' no esta en el diccionario.
+Quizas quiso decir: pula-vinar, pule-vinar, puli-vinar, pulo-vinar, pulmonar
+
+Linea 2, 'vivamus' no esta en el diccionario.
+Quizas quiso decir: vivamos, viva-mus, vivas, vivacs, vivais
+
+Linea 3, 'pharetra' no esta en el diccionario.
+Quizas quiso decir: pareara, partera, hartera, parear, parea
+
+Linea 3, 'erat' no esta en el diccionario.
+Quizas quiso decir: era, erad, eral, eran, erar
+
+Linea 3, 'porttitor' no esta en el diccionario.
+Quizas quiso decir: portier, portico, porticos, portor, portador
+
+Linea 3, 'elit' no esta en el diccionario.
+Quizas quiso decir: elite, elites, elitro, elida, elide
+
+Linea 3, 'placerat' no esta en el diccionario.
+Quizas quiso decir: placera, placeran, placeras, placera-ta, placera-te
+
+Linea 3, 'aliquam' no esta en el diccionario.
+Quizas quiso decir: alia, aliad, alian, aliar, alias
+
+Linea 3, 'erat' no esta en el diccionario.
+Quizas quiso decir: era, erad, eral, eran, erar
+
+Linea 3, 'volutpat' no esta en el diccionario.
+Quizas quiso decir: voluta, volutas, voluta-ta, voluta-te, voluta-ti
+
+Linea 4, 'nunc' no esta en el diccionario.
+Quizas quiso decir: nunca, nuncio, nuca, nuco, nube
+
+Linea 4, 'bibendum' no esta en el diccionario.
+Quizas quiso decir: biendra, biendro, bien-duma, bien-dume, bien-dumi
+
+Linea 4, 'egestas' no esta en el diccionario.
+Quizas quiso decir: egestad, gestas, ego-estas, egoistas, egresas
+
+Linea 4, 'orci' no esta en el diccionario.
+Quizas quiso decir: orca, orce, orco, ori, torci
+
+Linea 4, 'blandit' no esta en el diccionario.
+Quizas quiso decir: blandi, blandia, blandid, blandio, blandir
+
+Linea 4, 'aenean' no esta en el diccionario.
+Quizas quiso decir: anean, menean, aerea, aereas, aneen
+
+Linea 4, 'eget' no esta en el diccionario.
+Quizas quiso decir: egena, egeno, ego, ego-et, egos
+
+Linea 4, 'sem' no esta en el diccionario.
+Quizas quiso decir: sema, se, sea, sed, sel
+
+Linea 4, 'tincidunt' no esta en el diccionario.
+Quizas quiso decir: tincion, tincad-unta, tincad-unte, tincad-unto, tincad-un
+
+Linea 5, 'porttitor' no esta en el diccionario.
+Quizas quiso decir: portier, portico, porticos, portor, portador
+
+Linea 5, 'at' no esta en el diccionario.
+Quizas quiso decir: ata, ate, ato, ad, ah
+
+Linea 5, 'tempor' no esta en el diccionario.
+Quizas quiso decir: tempora, tempo, tempos, temor, temporal
+
+Linea 5, 'dui' no esta en el diccionario.
+Quizas quiso decir: dumi, dua, duo, dux, duz
+
+Linea 5, 'nunc' no esta en el diccionario.
+Quizas quiso decir: nunca, nuncio, nuca, nuco, nube
+
+Linea 5, 'malesuada' no esta en el diccionario.
+Quizas quiso decir: males-upada, males-usada, males-uvada, males-urda, males-cuada
+
+Linea 5, 'velit' no esta en el diccionario.
+Quizas quiso decir: velite, velis, veliz, velites, velica
+
+Linea 5, 'nec' no esta en el diccionario.
+Quizas quiso decir: ne, nea, nen, neo, necea
+
+Linea 6, 'pulvinar' no esta en el diccionario.
+Quizas quiso decir: pula-vinar, pule-vinar, puli-vinar, pulo-vinar, pulmonar
+
+Linea 6, 'ultricies' no esta en el diccionario.
+Quizas quiso decir: ultriz-cies, ultriz-ies, ultra-cies, albricies, ultriz-es
+
+Linea 6, 'vel' no esta en el diccionario.
+Quizas quiso decir: vela, vele, velo, ve, vea
+
+Linea 6, 'nullam' no esta en el diccionario.
+Quizas quiso decir: nula, nulas, nubla, nublad, nublan
+
+Linea 6, 'rhoncus' no esta en el diccionario.
+Quizas quiso decir: roncas, ronces, roncos, ron-cus, ronca
+
+Linea 6, 'lorem' no esta en el diccionario.
+Quizas quiso decir: lorea, loree, loreo, lores, loread
+
+Linea 6, 'curabitur' no esta en el diccionario.
+Quizas quiso decir: cura-bitar, cura-biter, cura-bitor, curaba-tura, curaba-tu
+
+Linea 7, 'massa' no esta en el diccionario.
+Quizas quiso decir: masas, masa, masca, masea, masia
+
+Linea 7, 'orci' no esta en el diccionario.
+Quizas quiso decir: orca, orce, orco, ori, torci
+
+Linea 7, 'tristique' no esta en el diccionario.
+Quizas quiso decir: tris-tique, triste-que, trisque, triseque, tris-tiquea
+
+Linea 7, 'sapien' no esta en el diccionario.
+Quizas quiso decir: sapeen, sacien, tapien, sapina, sapino
+
+Linea 7, 'vel' no esta en el diccionario.
+Quizas quiso decir: vela, vele, velo, ve, vea
+
+Linea 7, 'blandit' no esta en el diccionario.
+Quizas quiso decir: blandi, blandia, blandid, blandio, blandir
+
+Linea 7, 'bibendum' no esta en el diccionario.
+Quizas quiso decir: biendra, biendro, bien-duma, bien-dume, bien-dumi
+
+Linea 7, 'tellus' no esta en el diccionario.
+Quizas quiso decir: telles, tell, tell-usa, tell-use, tell-uso
+
+Linea 8, 'nunc' no esta en el diccionario.
+Quizas quiso decir: nunca, nuncio, nuca, nuco, nube
+
+Linea 8, 'maximus' no esta en el diccionario.
+Quizas quiso decir: maximums, maximum, maximas, maximos, maxima
+
+Linea 8, 'semper' no esta en el diccionario.
+Quizas quiso decir: semen, sembre, sepe, sepes, seer
+
+Linea 8, 'mattis' no esta en el diccionario.
+Quizas quiso decir: matais, mateis, mantis, matiz, matas
+
+Linea 8, 'aenean' no esta en el diccionario.
+Quizas quiso decir: anean, menean, aerea, aereas, aneen
+
+Linea 8, 'bibendum' no esta en el diccionario.
+Quizas quiso decir: biendra, biendro, bien-duma, bien-dume, bien-dumi
+
+Linea 8, 'mauris' no esta en el diccionario.
+Quizas quiso decir: mauras, maures, mauros, maoris, cauris
+
+Linea 8, 'at' no esta en el diccionario.
+Quizas quiso decir: ata, ate, ato, ad, ah
+
+Linea 8, 'nibh' no esta en el diccionario.
+Quizas quiso decir: ni, nia, nin, ni-bah, ni-be
+
+Linea 8, 'congue' no esta en el diccionario.
+Quizas quiso decir: conguea, conguee, congueo, conque, colgue
+
+Linea 9, 'condimentum' no esta en el diccionario.
+Quizas quiso decir: condimenta, condimente, condimento, condimentad, condimentan
+
+Linea 9, 'quisque' no esta en el diccionario.
+Quizas quiso decir: quis-que, quique, quinque, quise, quiste
+
+Linea 9, 'felis' no esta en el diccionario.
+Quizas quiso decir: feliz, felus, fe-lis, filis, melis
+
+Linea 9, 'scelerisque' no esta en el diccionario.
+Quizas quiso decir: suele-risque, cele-risque, sece-risque, seles-risque, sel-risque
+
+Linea 9, 'vitae' no esta en el diccionario.
+Quizas quiso decir: vita, vitare, vitase, vitad, vital
+
+Linea 9, 'consectetur' no esta en el diccionario.
+Quizas quiso decir: conecte-tura, conecte-tu, conecte-tui, conecte-tul, conecte-tun
+
+Linea 10, 'tincidunt' no esta en el diccionario.
+Quizas quiso decir: tincion, tincad-unta, tincad-unte, tincad-unto, tincad-un
+
+Linea 10, 'sem' no esta en el diccionario.
+Quizas quiso decir: sema, se, sea, sed, sel
+
+Linea 10, 'vivamus' no esta en el diccionario.
+Quizas quiso decir: vivamos, viva-mus, vivas, vivacs, vivais
+
+Linea 10, 'ut' no esta en el diccionario.
+Quizas quiso decir: uta, uf, uh, un, tu
+
+Linea 10, 'dictum' no esta en el diccionario.
+Quizas quiso decir: dicta, dicte, dicto, dictamo, dictad
+
+Linea 10, 'massa' no esta en el diccionario.
+Quizas quiso decir: masas, masa, masca, masea, masia
+
+Linea 10, 'integer' no esta en el diccionario.
+Quizas quiso decir: integre, integren, integres, integra, integro
+
+Linea 10, 'ipsum' no esta en el diccionario.
+Quizas quiso decir: ipsi, ipsis, insuma, insume, insumi
+
+Linea 11, 'vulputate' no esta en el diccionario.
+Quizas quiso decir: vulpeja-te, vulpina-te, vulgo-tate, vulto-tate, vulva-tate
+
+Linea 11, 'quam' no esta en el diccionario.
+Quizas quiso decir: que, qui, quema, quia, quias
+
+Linea 11, 'hendrerit' no esta en el diccionario.
+Quizas quiso decir: henderia, hender-rita, hender-rite, hender-rito, hender-ria
+
+Linea 11, 'viverra' no esta en el diccionario.
+Quizas quiso decir: vivera, viverrida, viveral, viveras, vivero
+
+Linea 11, 'dui' no esta en el diccionario.
+Quizas quiso decir: dumi, dua, duo, dux, duz
+
+Linea 11, 'quisque' no esta en el diccionario.
+Quizas quiso decir: quis-que, quique, quinque, quise, quiste
+
+Linea 11, 'lobortis' no esta en el diccionario.
+Quizas quiso decir: lobo-reis, lobo-tris, lo-bortos, lo-bornis, laborais
+
+Linea 12, 'malesuada' no esta en el diccionario.
+Quizas quiso decir: males-upada, males-usada, males-uvada, males-urda, males-cuada
+
+Linea 12, 'elementum' no esta en el diccionario.
+Quizas quiso decir: elemento, elemental, elementar, elementos, elementada
+
+Linea 12, 'euismod' no esta en el diccionario.
+Quizas quiso decir: luismo, luismos, egoismo, egoismos, encismo
+
+Linea 12, 'nunc' no esta en el diccionario.
+Quizas quiso decir: nunca, nuncio, nuca, nuco, nube
+
+Linea 12, 'interdum' no esta en el diccionario.
+Quizas quiso decir: inter-duma, inter-dume, inter-dumi, inter-dumo, inter-dua
+
+Linea 12, 'mauris' no esta en el diccionario.
+Quizas quiso decir: mauras, maures, mauros, maoris, cauris
+
+Linea 12, 'quisque' no esta en el diccionario.
+Quizas quiso decir: quis-que, quique, quinque, quise, quiste
+
+Linea 13, 'faucibus' no esta en el diccionario.
+Quizas quiso decir: fauces, faucal-bus, fauces-bus, faucales, faunicas
+
+Linea 13, 'dapibus' no esta en el diccionario.
+Quizas quiso decir: da-pibas, da-pibes, da-pius, da-pirus, api-bus
+
+Linea 13, 'imperdiet' no esta en el diccionario.
+Quizas quiso decir: impedi-et, impendi-et, imperdible, imperdibles, imperita
+
