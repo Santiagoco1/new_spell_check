@@ -69,7 +69,6 @@ Cuando se llega al final de una ramificación, se comprueba si la palabra perten
 * **test_dict.c** : archivo con los tests de dict.c
 * **test_list.c** : archivo con los tests de list.c
 * **test_metd.c** : archivo con los tests de metd.c
-* **test_print.c** : archivo con los tests de print.c
 ## Comandos 
 Para compilar el programa, correr el siguiente comando:
 ```bash
